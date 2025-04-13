@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'latihan_layout.dart'; // pakai relative path
+import 'package:latihan_layout_navigation/latihan_layout.dart';
 
 void main() {
   runApp(const MainApp());
@@ -12,8 +12,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Latihan Flutter Modul 1',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(),
       home: const LayoutPage(),
     );
   }
