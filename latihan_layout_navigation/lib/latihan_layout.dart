@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:latihan_layout_navigation/latihan_navigation.dart';
+import 'latihan_navigation.dart'; // pastikan ini sesuai nama file & path
 
 class LayoutPage extends StatelessWidget {
-  const LayoutPage ({super.key});
+  const LayoutPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,71 +19,36 @@ class LayoutPage extends StatelessWidget {
             'Static ListView',
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
-          // START TODO 1
-
-          // END TODO 1
-          const SizedBox(height: 20),
-
-          
-          const Text(
-            'ListView.builder (Vertical)',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-          ),
-          SizedBox(
-            height: 300,
-            // START TODO 2
-            
-            // END TODO 2
-          ),
-          const SizedBox(height: 20),
-
-          
-          const Text(
-            'Horizontal ListView',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-          ),
-          SizedBox(
-            height: 100,
-            // START TODO 3
-            
-            // END TODO 3
-          ),
-          const SizedBox(height: 20),
-
-        
-          const Text(
-            'GridView',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-          ),
-          SizedBox(
-            height: 300,
-            // START TODO 4
-            
-            // END TODO 4
-          ),
-
-          const SizedBox(height: 20),
-          const Text(
-            'Navigation',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-          ),
-          Center(
-            child: ElevatedButton(
-              onPressed: () {
-                // START TODO 5 : navigation.push
-
-                // END TODO 5
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
-                padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+          const SizedBox(height: 10),
+          ListView(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            children: [
+              ListTile(
+                leading: const Icon(Icons.home),
+                title: const Text('Home'),
+                subtitle: const Text('This is the home page'),
+                trailing: const Icon(Icons.arrow_forward),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const NavigationPage(),
+                    ),
+                  );
+                },
               ),
-              child: const Text(
-                'Pergi ke NavigationPage',
-                style: TextStyle(fontSize: 16),
+              ListTile(
+                leading: const Icon(Icons.settings),
+                title: const Text('Settings'),
+                subtitle: const Text('This is the settings page'),
+                trailing: const Icon(Icons.arrow_forward),
+                onTap: () {
+                  // bisa diarahkan ke page lain
+                },
               ),
-            ),
-          ),
+            ],
+          )
         ],
       ),
     );

@@ -21,15 +21,14 @@ class NavigationPage extends StatelessWidget {
             const SizedBox(height: 20),
             ElevatedButton.icon(
               onPressed: () {
-                // START TODO 5 : navigation.pop
-
-                // END TODO 5
+                Navigator.pop(context); // <- ini untuk kembali
               },
               icon: const Icon(Icons.arrow_back),
               label: const Text('Kembali'),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blueAccent,
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
               ),
             ),
           ],
