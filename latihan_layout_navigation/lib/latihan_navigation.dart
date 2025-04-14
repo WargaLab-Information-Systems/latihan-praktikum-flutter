@@ -23,6 +23,8 @@ class NavigationPage extends StatelessWidget {
               onPressed: () {
                 // START TODO 5 : navigation.pop
 
+                Navigator.pop(context);
+
                 // END TODO 5
               },
               icon: const Icon(Icons.arrow_back),
