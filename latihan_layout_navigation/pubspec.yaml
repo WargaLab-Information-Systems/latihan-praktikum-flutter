@@ -17,3 +17,13 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - 'assets/images/gbr0.jpg'
+    - 'assets/images/gbr1.jpg'
+    - 'assets/images/gbr2.jpg'
+    - 'assets/images/gbr3.jpg'
+    - 'assets/images/gbr4.jpg'
+    - 'assets/images/gbr5.jpg'
+    - 'assets/images/gbr6.jpg'
+    - 'assets/images/gbr7.jpg'
+    - 'assets/images/gbr8.jpg'
