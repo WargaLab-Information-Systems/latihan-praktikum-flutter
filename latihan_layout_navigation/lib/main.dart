@@ -2,19 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:latihan_layout_navigation/latihan_layout.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Latihan Flutter Modul 1',
-      theme: ThemeData(),
-      home: const LayoutPage(),
+      title: 'Flutter Demo',
+      home: LayoutPage(), // <-- PASTIKAN INI ADA
     );
   }
 }
-
