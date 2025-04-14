@@ -22,7 +22,7 @@ class NavigationPage extends StatelessWidget {
             ElevatedButton.icon(
               onPressed: () {
                 // START TODO 5 : navigation.pop
-
+              Navigator.pop(context);
                 // END TODO 5
               },
               icon: const Icon(Icons.arrow_back),
