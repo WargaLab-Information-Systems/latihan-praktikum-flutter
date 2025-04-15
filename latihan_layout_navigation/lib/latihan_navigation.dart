@@ -23,13 +23,18 @@ class NavigationPage extends StatelessWidget {
               onPressed: () {
                 // START TODO 5 : navigation.pop
 
+                Navigator.pop(context);
+
                 // END TODO 5
               },
               icon: const Icon(Icons.arrow_back),
               label: const Text('Kembali'),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blueAccent,
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 12,
+                ),
               ),
             ),
           ],
