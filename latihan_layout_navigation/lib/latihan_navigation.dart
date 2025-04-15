@@ -15,18 +15,18 @@ class NavigationPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              'Oke, Berhasil',
+              'Oke, Berhasil broo',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 20),
             ElevatedButton.icon(
               onPressed: () {
                 // START TODO 5 : navigation.pop
-
+                Navigator.pop(context);
                 // END TODO 5
               },
               icon: const Icon(Icons.arrow_back),
-              label: const Text('Kembali'),
+              label: const Text('Kembali duls'),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blueAccent,
                 padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
