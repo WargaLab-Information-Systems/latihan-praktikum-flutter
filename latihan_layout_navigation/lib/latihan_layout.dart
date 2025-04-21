@@ -20,7 +20,17 @@ class LayoutPage extends StatelessWidget {
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
           // START TODO 1
+          ListView(
+            children : [
+              ListTile(
+                leading: const Icon(Icons.home),
+                title: const Text('Home'),
+                subtitle: const Text('This is the home page'),
+                trailing: const Icon(Icons.arrow_forward),
+              )
 
+            ]
+          )
           // END TODO 1
           const SizedBox(height: 20),
 

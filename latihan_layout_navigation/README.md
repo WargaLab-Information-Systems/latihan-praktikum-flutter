@@ -1,6 +1,6 @@
 # Latihan Modul 1 : Layout dan Navigation
 
-Setiap Latihan memiliki **3 tugas (TODO)** yang bisa dikerjakan.
+Setiap Latihan memiliki **5 tugas (TODO)** yang bisa dikerjakan.
 
 Gunakan pengetahuan yang telah Anda peroleh selama belajar di kelas praktikum dan tunjukkan kemampuan Anda dalam menguasai materi.
 
