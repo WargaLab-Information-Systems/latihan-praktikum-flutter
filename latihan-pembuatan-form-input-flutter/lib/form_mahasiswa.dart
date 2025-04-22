@@ -50,7 +50,9 @@ class _FormMahasiswaState extends State<FormMahasiswa> {
                 maxLength: 12,
                 validator: (value) {
                   // TODO_1
-
+                  if (value == null || value.length > 12) {
+                    return 'NIM harus 12 digit';
+                  }
                   //END_TODO_1
                 },
                 onSaved: (value) => _nim = value!,
@@ -59,11 +61,18 @@ class _FormMahasiswaState extends State<FormMahasiswa> {
 
               // Nama Lengkap                            
               TextFormField(
-                // TODO_2
-
-
-                // END_TODO_2
-                onSaved: (value) => _telepon = value!,
+                decoration: const InputDecoration(
+                  labelText: 'Nama Lengkap',
+                  border: OutlineInputBorder(),
+                ),
+                validator: (value) {
+                  // TODO_2
+                  if (value == null || value.isEmpty) {
+                    return 'Nama lengkap wajib diisi';
+                  }
+                  return null;
+                },
+                onSaved: (value) => _nama = value!,
               ),
               const SizedBox(height: 12),
 
@@ -100,8 +109,21 @@ class _FormMahasiswaState extends State<FormMahasiswa> {
               // Nomor Telepon
               TextFormField(
                 // TODO_3
+                decoration: const InputDecoration(
+                  labelText: 'Nomor Telepon',
+                  border: OutlineInputBorder(),
+                ),
+                keyboardType: TextInputType.number,
 
-
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Nomor telepon wajib diisi';
+                  }
+                  if (!RegExp(r'^[0-9]+$').hasMatch(value)) {
+                    return 'Nomor telepon hanya boleh angka';
+                  }
+                  return null;
+                },
                 // END_TODO_3
                 onSaved: (value) => _telepon = value!,
               ),
@@ -130,7 +152,20 @@ class _FormMahasiswaState extends State<FormMahasiswa> {
               // Fakultas
               DropdownButtonFormField<String>(
                 // TODO_4
-                
+                value: _fakultas,
+                decoration: InputDecoration(labelText: "Pilih fakultas"),
+                items: fakultasList.map((fakultas) {
+                  return DropdownMenuItem(
+                    value: fakultas,
+                    child: Text(fakultas),
+                  );
+                }).toList(),
+                onChanged: (value) {
+                  setState(() {
+                    _fakultas = value;
+                  });
+                },
+                validator: (value) => value == null ? 'Pilih fakultas' : null,
                 // END_TODO_4
                 onSaved: (value) => _fakultas = value,
               ),
