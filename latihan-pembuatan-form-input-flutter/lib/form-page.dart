@@ -35,9 +35,15 @@ class _FormPageState extends State<FormPage> {
                   border: OutlineInputBorder(),
                 ),
                 validator: (value) {
+                
                   // TODO_20
-
-                  // TODO_20
+                  if (value == null || value.isEmpty) {
+                    return 'Nama wajib diisi';
+                  }
+                  if (value.length < 3) {
+                    return 'Nama terlalu pendek';
+                  }
+                  return null; // Added return statement for valid case
                 },
                 onSaved: (value) {
                   _name = value!;
@@ -48,7 +54,21 @@ class _FormPageState extends State<FormPage> {
               // Email
               TextFormField(
                 // TODO_30
-
+                decoration: const InputDecoration(
+                  labelText: 'Email',
+                  border: OutlineInputBorder(),
+                ),
+                validator: (value) {
+                  // TODO_30
+                  if (value == null || value.isEmpty) {
+                    return 'Email wajib diisi';
+                  }
+                  if (!RegExp(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$').hasMatch(value)) {
+                    return 'Format email tidak valid';
+                  }
+                  return null;
+                },
+                keyboardType: TextInputType.emailAddress,
 
                 // TODO_30
                 onSaved: (value) {
