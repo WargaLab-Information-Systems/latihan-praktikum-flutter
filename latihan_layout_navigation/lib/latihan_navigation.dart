@@ -20,9 +20,9 @@ class NavigationPage extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             ElevatedButton.icon(
-              onPressed: () {
+              onPressed: () {                
                 // START TODO 5 : navigation.pop
-
+                Navigator.pop(context);
                 // END TODO 5
               },
               icon: const Icon(Icons.arrow_back),
